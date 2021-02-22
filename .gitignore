@@ -9,5 +9,9 @@ Thumbs.db
 # Vendors
 node_modules/
 
+dist/game.js
+dist/game.js.map
+
 # Build
 /npm-debug.log
+
