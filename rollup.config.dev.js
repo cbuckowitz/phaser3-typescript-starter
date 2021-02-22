@@ -19,6 +19,7 @@ export default {
         name: 'MyGame',
         format: 'iife',
         sourcemap: true,
+        intro: 'var global = window;'
     },
 
     plugins: [
