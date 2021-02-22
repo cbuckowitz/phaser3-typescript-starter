@@ -1,7 +1,6 @@
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
-import serve from 'rollup-plugin-serve';
 import typescript from 'rollup-plugin-typescript2';
 
 export default {
@@ -20,7 +19,6 @@ export default {
         name: 'MyGame',
         format: 'iife',
         sourcemap: true,
-        intro: 'var global = window;'
     },
 
     plugins: [
@@ -55,17 +53,6 @@ export default {
 
         //  See https://www.npmjs.com/package/rollup-plugin-typescript2 for config options
         typescript(),
-
-        //  See https://www.npmjs.com/package/rollup-plugin-serve for config options
-        serve({
-            open: true,
-            contentBase: 'dist',
-            host: 'localhost',
-            port: 10001,
-            headers: {
-                'Access-Control-Allow-Origin': '*'
-            }
-        })
 
     ]
 };
